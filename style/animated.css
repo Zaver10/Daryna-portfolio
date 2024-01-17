@@ -1,0 +1,131 @@
+body {
+  background: -moz-linear-gradient(
+    45deg,
+    #02e1ba 0%,
+    #0911b9 29%,
+    #d911f2 66%,
+    #ffa079 100%
+  );
+  background: -webkit-linear-gradient(
+    45deg,
+    #02e1ba 0%,
+    #0911b9 29%,
+    #d911f2 66%,
+    #ffa079 100%
+  );
+  background: linear-gradient(
+    45deg,
+    #02e1ba 0%,
+    #0911b9 29%,
+    #d911f2 66%,
+    #ffa079 100%
+  );
+  background-size: 10000% 10000%;
+  -webkit-animation: Gradient 15s ease infinite;
+  -moz-animation: Gradient 15s ease infinite;
+  animation: Gradient 15s ease infinite;
+  min-height: calc(100vh - 2rem);
+}
+
+@-webkit-keyframes Gradient {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+
+@-moz-keyframes Gradient {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+
+@keyframes Gradient {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+
+.main__skill-bar {
+  width: 100%;
+  margin: 50px auto 0;
+  padding: 20px;
+}
+.main__skill-bar li {
+  position: relative;
+  margin: 50px 0;
+}
+.main__skill-bar li::before {
+  content: "";
+  position: absolute;
+  top: 51px;
+  left: 0;
+  width: 100%;
+  height: 25px;
+  background-color: rgba(227, 226, 237, 0.5);
+  border-radius: 100px;
+}
+.main__skill-bar li::after {
+  content: "";
+  position: absolute;
+  top: 51px;
+  left: 0;
+  width: 0;
+  height: 25px;
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: 0px 5px 10px 0px rgba(3, 143, 136, 0.794);
+  border-radius: 100px;
+  animation-duration: 6s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+}
+.main__skill-bar li.html:after {
+  animation-name: html;
+}
+@keyframes html {
+  to {
+    width: 90%;
+  }
+}
+.main__skill-bar li.css:after {
+  animation-name: css;
+}
+@keyframes css {
+  to {
+    width: 75%;
+  }
+}
+.main__skill-bar li.js:after {
+  animation-name: js;
+}
+@keyframes js {
+  to {
+    width: 60%;
+  }
+}
+.main__skill-bar li.basket:after {
+  animation-name: basket;
+}
+@keyframes basket {
+  to {
+    width: 99%;
+  }
+}
